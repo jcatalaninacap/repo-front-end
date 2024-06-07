@@ -223,3 +223,34 @@ footer {
     visibility: visible;
     opacity: 1;
 }
+.casilla .btn-cart {
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+    transition: 0.1s background-color linear, 0.1s color linear;
+    padding: 8px 10px;
+	font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: brandon-grotesque;
+
+    font-style: normal;
+    text-transform: lowercase;
+    letter-spacing: .24em;
+    color: #fff;
+    border-color: #fff;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    line-height: 1em;
+
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.casilla:hover .btn-cart {
+    visibility: visible;
+    opacity: 1;
+}

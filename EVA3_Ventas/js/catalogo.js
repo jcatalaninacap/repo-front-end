@@ -2,11 +2,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     vista();
-    /*
-    updateCartCount();
-    loadCartItems();
-    */
-
 });
 /*----------------------------------------------------*/
 
@@ -17,62 +12,45 @@ document.addEventListener("DOMContentLoaded", function() {
 /*----------------------------------------------------*/
 
 function vista(){
-  arreglo_img = Array(4);
+  arreglo_img = Array(6);
   vistatext = "";
 
   const img_1 = {
       nombre: "T-Shirt - The Great Heathen Warrior",
-      precio: '$25.000',
+      precio: 25000,
       imagen: "images/polera_1.jpg",
       categoria: "camisetas",
-      detalle: function(){
-          return this.nombre + " $" + this.precio;
-      }
   }
   const img_2 = {
       nombre: "Zipper - Heidrun (white)",
-      precio: '$50.000',
+      precio: 50000,
       imagen: "images/poleron_1.jpg",
       categoria: "polerones",
-      detalle: function(){
-          return this.nombre + " $" + this.precio;
-      }
   }
   const img_3 = {
       nombre: "T-Shirt - Saxons And Vikings",
-      precio: '$25.000',
+      precio: 25000,
       imagen: "images/polera_2.jpg",
       categoria: "camisetas",
-      detalle: function(){
-          return this.nombre + " $" + this.precio;
-      }
   }
   const img_4 = {
       nombre: "Sweater - The Great Heathen Warrior",
-      precio: '$50.000',
+      precio: 50000,
       imagen: "images/poleron_2.jpg",
       categoria: "polerones",
-      detalle: function(){
-          return this.nombre + " $" + this.precio;
-      }
   }
   const img_5 = {
     nombre: "Wristband - White Runes",
-    precio: '$15.000',
+    precio: 15000,
     imagen: "images/muñequera_w.jpg",
     categoria: "wristband",
-    detalle: function(){
-        return this.nombre + " $" + this.precio;
-    }
 }
 const img_6 = {
     nombre: "Wristband - Red Runes",
-    precio: '$15.000',
+    precio: 15000,
     imagen: "images/muñequera_r.jpg",
     categoria: "wristband",
-    detalle: function(){
-        return this.nombre + " $" + this.precio;
-    }
+
 }
 
   arreglo_img[0] = img_1;
@@ -88,9 +66,11 @@ const img_6 = {
       <div class="casilla" data-category="${arreglo_img[i].categoria}">
           <img src="${arreglo_img[i].imagen}" alt="${arreglo_img[i].nombre}">
           <div class="product-detail">
-              <strong>${arreglo_img[i].nombre}</strong><br>
-              ${arreglo_img[i].precio}
+              <strong>${arreglo_img[i].nombre}</strong><br>$
+              ${arreglo_img[i].precio}<br><br>
+              <button class="btn-cart" onclick="addToCart(event, '${arreglo_img[i].nombre}', ${arreglo_img[i].precio})">Carrito</button>
           </div>
+          
       </div>`;
   }
   document.getElementById("C001").innerHTML = vistatext;
