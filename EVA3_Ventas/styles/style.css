@@ -249,8 +249,43 @@ footer {
     cursor: pointer;
     -webkit-appearance: none;
     appearance: none;
+    border-radius: 5px;
 }
 .casilla:hover .btn-cart {
     visibility: visible;
+    border-color: #ffffff;
     opacity: 1;
+}
+
+/*----------------------------------------*/
+.cart {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-item button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
 }

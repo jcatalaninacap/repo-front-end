@@ -68,7 +68,7 @@ const img_6 = {
           <div class="product-detail">
               <strong>${arreglo_img[i].nombre}</strong><br>$
               ${arreglo_img[i].precio}<br><br>
-              <button class="btn-cart" onclick="addToCart(event, '${arreglo_img[i].nombre}', ${arreglo_img[i].precio})">Carrito</button>
+              <button class="btn-cart" onclick="addToCart(event, '${arreglo_img[i].nombre}', ${arreglo_img[i].precio})">Añadir al Carrito</button>
           </div>
           
       </div>`;
