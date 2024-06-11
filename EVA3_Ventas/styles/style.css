@@ -259,6 +259,7 @@ footer {
 
 /*----------------------------------------*/
 .cart {
+    font-family: brandon-grotesque;
     display: none;
     position: fixed;
     right: 0;
@@ -269,6 +270,7 @@ footer {
     box-shadow: -2px 0 5px rgba(0,0,0,0.5);
     padding: 20px;
     overflow-y: auto;
+   
 }
 
 .cart-content {
@@ -279,13 +281,14 @@ footer {
 .cart-item {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .cart-item button {
-    background-color: red;
+    background-color: rgb(141, 136, 136);
     color: white;
     border: none;
     padding: 5px;
     cursor: pointer;
+    border-radius: 6px;
 }

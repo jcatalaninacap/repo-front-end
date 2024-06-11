@@ -28,14 +28,19 @@ function updateCart() {
         productElement.className = 'cart-item';
         productElement.innerHTML = `
             <span>${product.name}</span>
+            <span> : </span>
             <span>${product.quantity}</span>
-            <span>$${product.price.toFixed(2)}</span>
-            <button onclick="removeFromCart(${product.id})">Eliminar</button>
+            <span> x </span>
+            <span>$${Math.trunc(product.price)}</span>
+            <button class="remove-btn">Eliminar</button>
         `;
         cartItemsContainer.appendChild(productElement);
+
+        // Añadir el event listener al botón
+        productElement.querySelector('.remove-btn').addEventListener('click', () => removeFromCart(product.id));
     });
 
-    cartTotalContainer.innerText = `Total: $${total.toFixed(1)}`;
+    cartTotalContainer.innerText = `Total: $${Math.trunc(total)}`;
     document.getElementById('cart-count').innerText = cart.length;
 }
 
